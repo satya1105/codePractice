@@ -21,7 +21,6 @@ function mergedArray(array1, array2) {
     }
   }
 
-
   while (i < array1.length) {
     array3.push(array1[i]);
     i++;

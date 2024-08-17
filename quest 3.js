@@ -1,21 +1,21 @@
 // Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once.
 
-function removeDuplicates(nums) {
-    if (nums.length === 0) return 0;
+let array = [2, 2, 3, 4, 6, 7, 7, 8, 9, 9];
 
-    let a = 0;
-
-    for (let i = 1; i < nums.length; i++) {
-        if (nums[i] !== nums[a]) {
-            a++;
-            nums[a] = nums[i];
+function check(array) {
+    let s = array.length;
+    if (s === 0) {
+        console.log("no element");
+    } else {
+        for (let i = 0; i < s - 1; i++) {
+            if (array[i] === array[i + 1]) {
+                array.splice(i, 1); 
+                i--; 
+                s--; 
+            }
         }
     }
-    return a + 1;
+    console.log(array);
 }
 
-let nums = [1, 1, 2, 2, 3];
-let length = removeDuplicates(nums);
-
-console.log(length); 
-console.log(nums.slice(0, length)); 
+check(array);

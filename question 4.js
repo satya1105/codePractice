@@ -1,33 +1,33 @@
 // Given an array nums of size n, return the majority element. The majority element is the element that appears more than ⌊n / 2⌋ times.
 let array = [2, 8, 4, 8, 6, 8, 8, 8, 8, 8, 8, 2, 2, 2];
 
-function findMaxCountNumber(array) {
-    
-    array.sort((a, b) => a - b); 
-    
-    let maxCount = 1;
-    let currentCount = 1;
-    let maxNum = array[0];
-    
-    for (let i = 1; i < array.length; i++) {
-        if (array[i] === array[i - 1]) {
-            currentCount++;
+let array = [2, 2, 2, 2, 8, 8, 8, 8, 8, 8, 8, 8];
+
+function maximum(array) {
+    let a = null;
+    let count = 0;
+
+    for (let i = 0; i < array.length; i++) {
+        if (count === 0) {
+            a = array[i];
+            count = 1;
+        } else if (array[i] === a) {
+            count++;
         } else {
-            currentCount = 1; 
-        }
-        
-        if (currentCount > maxCount) {
-            maxCount = currentCount;
-            maxNum = array[i];
+            count--;
         }
     }
-    
-    let c = array.length / 2;
-    if (maxCount > c) {
-        console.log(maxNum);
+    count = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === a) {
+            count++;
+        }
+    }
+    let c = Math.floor(array.length / 2);
+    if (count > c) {
+        console.log(a);
     } else {
         console.log("0");
     }
 }
-
-findMaxCountNumber(array);
+maximum(array);

@@ -6,6 +6,8 @@
 let array1 = [2, 4, 6, 7];
 let array2 = [1, 2, 5, 8];
 
+// let array 
+
 function mergedArray(array1, array2) {
   let array3 = [];
   let i = 0;
@@ -35,3 +37,5 @@ function mergedArray(array1, array2) {
 }
 
 console.log( mergedArray(array1, array2));
+
+

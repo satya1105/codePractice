@@ -1,7 +1,8 @@
 // Given an array nums of size n, return the majority element. The majority element is the element that appears more than ⌊n / 2⌋ times.
 // let array = [2, 8, 4, 8, 6, 8, 8, 8, 8, 8, 8, 2, 2, 2];
 
-let array = [2, 2, 2, 2, 8, 8, 8, 8, 8, 8, 8, 8];
+// let array = [2, 2, 2, 2, 8, 8, 8, 8, 8, 8, 8, 8];
+let array = [2,4,5,6,0,0,0,0,0,1];
 
 function maximum(array) {
     let a = null;

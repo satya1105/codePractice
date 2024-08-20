@@ -2,6 +2,9 @@ let array1 = [2, 3, 4, 5, 6, 7, 0, 0, 0, 0, 0, 0];
 let array2 = [1, 5, 6, 7, 8, 9];
 
 let m = array1.length - array2.length;
+console.log("value of array",array1.length);
+console.log("value of m",m);
+
 let n = array2.length;
 
 let i = m - 1; // Last element in the first part of array1
